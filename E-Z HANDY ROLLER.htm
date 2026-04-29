@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Z HANDY ROLLER - 傑肯企業有限公司</title>
+    <style>
+        :root { --primary-blue: #004494; --nav-bg: #2d2d2d; --content-width: 1200px; }
+        body { font-family: Arial, "Microsoft JhengHei", sans-serif; margin: 0; padding: 0; background: #fff; line-height: 1.6; }
+        
+        /* 頁首標誌：1200px 放大撐滿 */
+        header { max-width: var(--content-width); margin: 0 auto; padding: 20px 0; }
+        .header-banner { display: flex; width: 100%; align-items: center; }
+        .mark-img { height: 150px; width: auto; flex-shrink: 0; }
+        .logo-img { height: 150px; flex-grow: 1; object-fit: fill; }
+
+        /* 導覽列 */
+        nav { background: var(--nav-bg); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; max-width: var(--content-width); margin: 0 auto; }
+        .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 12px 0; text-decoration: none; color: white; border-right: 1px solid #444; }
+        .nav-item:hover { background-color: var(--primary-blue); }
+        .lang-zh { font-size: 16px; font-weight: bold; }
+        .lang-en { font-size: 11px; color: #aaa; text-transform: uppercase; }
+
+        /* 內容區 */
+        .main-content { max-width: var(--content-width); margin: 40px auto; padding: 0 20px; }
+        
+        /* 產品標題與專利資訊 */
+        .product-header { text-align: center; margin-bottom: 30px; }
+        .product-header h1 { color: var(--primary-blue); font-size: 32px; margin-bottom: 5px; }
+        .patent-tag { color: #d32f2f; font-weight: bold; font-size: 18px; display: block; }
+
+        /* 中英文特點描述 */
+        .feature-box { background: #f8f9fa; border-top: 3px solid var(--primary-blue); padding: 25px; margin-bottom: 40px; border-radius: 0 0 10px 10px; }
+        .feature-item { margin-bottom: 15px; }
+        .zh-text { font-size: 18px; color: #333; font-weight: bold; display: block; }
+        .en-text { font-size: 15px; color: #666; font-style: italic; display: block; }
+
+        /* 產品展示圖佈局：縮小整體區域寬度以避免解析度失真 */
+        .product-gallery { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+            align-items: start;
+            max-width: 800px; /* 限制整體寬度，讓圖片看起來更精緻 */
+            margin: 0 auto;  /* 置中 */
+        }
+        
+        /* 左側主圖容器 */
+        .main-image { border: 1px solid #eee; padding: 10px; text-align: center; background: #fff; }
+        .main-image img { 
+            width: 100%; 
+            max-width: 300px; /* 限制寬度縮小一半 */
+            height: auto; 
+            object-fit: contain; 
+        }
+
+        /* 右側容器 */
+        .side-images { display: flex; flex-direction: column; gap: 15px; }
+        .side-card { border: 1px solid #eee; padding: 10px; text-align: center; background: #fff; }
+        .side-card img { 
+            width: 100%; 
+            max-width: 200px; /* 同步縮小 */
+            height: auto; 
+        }
+        
+        .image-label { display: block; margin-top: 8px; font-weight: bold; color: var(--primary-blue); font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .product-gallery { grid-template-columns: 1fr; max-width: 100%; }
+            .header-banner { flex-direction: column; }
+            .mark-img, .logo-img { height: auto; width: 95%; }
+            .nav-item { width: 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-banner">
+            <img src="https://www.jakian.com.tw/images/mark_001.jpg" class="mark-img" alt="MARK">
+            <img src="https://www.jakian.com.tw/images/JAKIAN_top.gif" class="logo-img" alt="JAKIAN LOGO">
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-item"><span class="lang-zh">首頁</span><span class="lang-en">Home</span></a>
+            <a href="Jakian com.htm" class="nav-item"><span class="lang-zh">公司簡介</span><span class="lang-en">Profile</span></a>
+            <a href="electric paint.htm" class="nav-item"><span class="lang-zh">電動噴槍</span><span class="lang-en">Electric Spray</span></a>
+            <a href="DC-PAINTING ROLLER.htm" class="nav-item"><span class="lang-zh">油漆滾輪</span><span class="lang-en">Paint Roller</span></a>
+            <a href="E-Z HANDY ROLLER.htm" class="nav-item"><span class="lang-zh">手動滾輪</span><span class="lang-en">Handy Roller</span></a>
+            <a href="GLUE GUNS SERIES.htm" class="nav-item"><span class="lang-zh">熱熔膠槍</span><span class="lang-en">Glue Guns</span></a>
+            <a href="E_Z Magicsticks.htm" class="nav-item"><span class="lang-zh">魔術棒</span><span class="lang-en">Magicsticks</span></a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="product-header">
+            <h1>E-Z HANDY ROLLER</h1>
+            <span class="patent-tag">U.S. Patent Pending #091837267</span>
+        </div>
+
+        <section class="feature-box">
+            <div class="feature-item">
+                <span class="zh-text">快速、簡單、適用於各類溶劑、水性塗料與著色劑</span>
+                <span class="en-text">A Fast & Easy Way to Handle All Types of Solvents, Water Based Paints & Stains</span>
+            </div>
+            <div class="feature-item">
+                <span class="zh-text">無需使用混亂的漆盤，粉刷更乾淨</span>
+                <span class="en-text">Without Having to Use Any Messy Trays</span>
+            </div>
+            <div class="feature-item">
+                <span class="zh-text">非常適合用於天花板、室內及室外牆壁</span>
+                <span class="en-text">Great For Use on Ceilings & Interior or Exterior Walls</span>
+            </div>
+        </section>
+
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="images/E-Z_9061500.jpg" alt="E-Z 906/1,500 cc.">
+                <span class="image-label">E-Z 906/1,500 cc.</span>
+            </div>
+
+            <div class="side-images">
+                <div class="side-card">
+                    <img src="images/E-Z_90615001.jpg" alt="Application View">
+                    <span class="image-label">使用示範 / Application View</span>
+                </div>
+                <div class="side-card">
+                    <img src="images/sky_001.gif" style="height:30px; object-fit:contain;" alt="Decorative">
+                    <span class="image-label">高品質粉刷保證 / Quality</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: #1a1a1a; color: #888; text-align: center; padding: 40px 0; margin-top: 60px;">
+        JAKIAN ENTERPRISES CO., LTD. &copy; 2026. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC-PAINTING ROLLER - 傑肯企業有限公司</title>
+    <style>
+        :root {
+            --primary-blue: #004494;
+            --nav-bg: #2d2d2d;
+            --content-width: 1200px;
+        }
+
+        body {
+            font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        /* --- 1. 頁首 --- */
+        header {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .header-banner {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .mark-img {
+            height: 150px;
+            width: auto;
+            flex-shrink: 0;
+        }
+
+        .logo-img {
+            height: 150px;
+            flex-grow: 1;
+            object-fit: fill; 
+        }
+
+        /* --- 2. 導覽列 --- */
+        nav {
+            background: var(--nav-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 0;
+            text-decoration: none;
+            color: white;
+            border-right: 1px solid #444;
+        }
+
+        .nav-item:hover { background-color: var(--primary-blue); }
+        .lang-zh { font-size: 16px; font-weight: bold; }
+        .lang-en { font-size: 11px; color: #aaa; text-transform: uppercase; }
+
+        /* --- 3. 內容區 --- */
+        .main-content {
+            max-width: var(--content-width);
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .product-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 標題下方藍線比照其他網頁拉長 (全寬) */
+        .product-header h1 {
+            color: var(--primary-blue);
+            font-size: 32px;
+            border-bottom: 3px solid var(--primary-blue);
+            display: block; /* 改為 block 以延伸寬度 */
+            padding-bottom: 10px;
+            margin: 0;
+        }
+
+        /* --- 4. 說明列：白底藍側條風格 --- */
+        .feature-box {
+            background: #fff;
+            border-left: 5px solid var(--primary-blue);
+            padding: 25px 30px;
+            margin: 30px 0 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .feature-box h2 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+        }
+
+        .feature-list strong {
+            color: var(--primary-blue);
+        }
+
+        /* --- 5. 圖片緊貼並排排版 --- */
+        .product-image-section {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 1000px; /* 放大容器寬度 */
+            margin: 50px auto;
+        }
+
+        .product-image-container {
+            display: flex;
+            align-items: stretch; /* 讓子元素高度一致 */
+            justify-content: center;
+            width: 100%;
+            gap: 0; /* 緊貼並排 */
+        }
+
+        .img-item {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .img-item img {
+            width: 100%;
+            height: 400px; /* 固定高度以實現並排一致性 */
+            object-fit: cover; /* 等比例縮放並填滿固定高度 */
+            display: block;
+        }
+
+        .model-info {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .model-tag {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            display: block;
+        }
+
+        .model-desc { 
+            color: #666; 
+            font-size: 18px; 
+            margin-top: 5px; 
+        }
+
+        /* 行動裝置適應 */
+        @media (max-width: 768px) {
+            .header-banner { flex-direction: column; }
+            .mark-img, .logo-img { height: auto; width: 95%; }
+            .nav-item { width: 50%; }
+            .product-image-container { flex-direction: column; }
+            .img-item img { height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-banner">
+            <img src="https://www.jakian.com.tw/images/mark_001.jpg" class="mark-img" alt="MARK">
+            <img src="https://www.jakian.com.tw/images/JAKIAN_top.gif" class="logo-img" alt="JAKIAN LOGO">
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-item"><span class="lang-zh">首頁</span><span class="lang-en">Home</span></a>
+            <a href="Jakian com.htm" class="nav-item"><span class="lang-zh">公司簡介</span><span class="lang-en">Profile</span></a>
+            <a href="electric paint.htm" class="nav-item"><span class="lang-zh">電動噴槍</span><span class="lang-en">Electric Spray</span></a>
+            <a href="DC-PAINTING ROLLER.htm" class="nav-item"><span class="lang-zh">油漆滾輪</span><span class="lang-en">Paint Roller</span></a>
+            <a href="E-Z HANDY ROLLER.htm" class="nav-item"><span class="lang-zh">手動滾輪</span><span class="lang-en">Handy Roller</span></a>
+            <a href="GLUE GUNS SERIES.htm" class="nav-item"><span class="lang-zh">熱熔膠槍</span><span class="lang-en">Glue Guns</span></a>
+            <a href="E_Z Magicsticks.htm" class="nav-item"><span class="lang-zh">魔術棒</span><span class="lang-en">Magicsticks</span></a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="product-header">
+            <h1>DC-PAINTING ROLLER
+            <br>直流油漆滾筒</h1>
+        </div>
+
+        <section class="feature-box">
+            <h2>產品特色 Features</h2>
+            <ul class="feature-list">
+                <li>
+                    <strong>無線便攜設計 (Portable & Cordless)：</strong><br>
+                    使用 4 顆 1 號電池（不含），支援 1.25 加侖以上之油漆容器。
+                </li>
+                <li>
+                    <strong>快速施工 (Fast Speed)：</strong><br>
+                    獨特自由活塞震盪設計，提供更節能且流暢的自動給漆方案。
+                </li>
+                <li>
+                    <strong>更快速、更乾淨、更輕鬆：</strong><br>
+                    僅適用於乳膠漆（水性漆）。單鍵控制，輕鬆調節高低油漆流量。
+                </li>
+            </ul>
+        </section>
+
+        <div class="product-image-section">
+            <div class="product-image-container">
+                <div class="img-item">
+                    <img src="https://www.jakian.com.tw/images/PR-9091250.jpg" alt="PR-909/1,250 CC.">
+                </div>
+                <div class="img-item">
+                    <img src="https://www.jakian.com.tw/images/PR-90912501.jpg" alt="PR-909 Application View">
+                </div>
+            </div>
+            <div class="model-info">
+                <span class="model-tag">PR-909 / 1,250 CC.</span>
+                <p class="model-desc">PRO-Painting Roller System & Application View</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer style="background: #1a1a1a; color: #888; text-align: center; padding: 40px 0; margin-top: 60px;">
+        JAKIAN ENTERPRISES CO., LTD. &copy; 2026. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

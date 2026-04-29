@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業簡介 Corporate Profile - 傑肯企業有限公司 JAKIAN ENTERPRISES CO., LTD.</title>
+    <style>
+        :root {
+            --primary-blue: #004494;
+            --accent-gold: #b8860b;
+            --nav-bg: #2d2d2d;
+            --content-width: 1200px;
+        }
+
+        body {
+            font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #2c3e50;
+        }
+
+        /* --- 1. 頁首 --- */
+        header {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 25px 0;
+        }
+
+        .header-banner {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .mark-img {
+            height: 150px;
+            width: auto;
+            flex-shrink: 0;
+        }
+
+        .logo-img {
+            height: 150px;
+            flex-grow: 1;
+            object-fit: fill; 
+        }
+
+        /* --- 2. 導覽列 --- */
+        nav {
+            background: var(--nav-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 14px 0;
+            text-decoration: none;
+            color: white;
+            border-right: 1px solid #444;
+        }
+
+        .nav-item:hover { background-color: var(--primary-blue); }
+        .lang-zh { font-size: 16px; font-weight: bold; }
+        .lang-en { font-size: 11px; color: #aaa; text-transform: uppercase; }
+
+        /* --- 3. 內容區排版 --- */
+        .main-content {
+            max-width: var(--content-width);
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* 統一標題設計 */
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px; /* 增加下方間距 */
+        }
+
+        .page-header h1 {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin: 0;
+            letter-spacing: 2px;
+            padding-bottom: 15px;
+            display: block;
+        }
+
+        /* 統一全寬藍色橫線 */
+        .page-header::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-blue);
+            margin: 0 auto;
+        }
+
+        .profile-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .corporate-text h2 {
+            font-size: 24px;
+            color: var(--primary-blue);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .zh { font-size: 18px; font-weight: bold; color: #1a1a1a; line-height: 1.8; margin-bottom: 5px; display: block; }
+        .en { font-size: 15px; color: #555; line-height: 1.6; display: block; text-align: justify; }
+
+        /* 聯絡資訊卡片 - 已去除頂部藍線 (border-top) */
+        .contact-card {
+            background: #f8f9fa;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 4px;
+            border-top: none; /* 明確移除頂部邊框線 */
+        }
+
+        .info-row label {
+            display: block;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header-banner { flex-direction: column; }
+            .nav-item { width: 50%; }
+            .profile-container { grid-template-columns: 1fr; }
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-banner">
+            <img src="https://www.jakian.com.tw/images/mark_001.jpg" alt="MARK" class="mark-img">
+            <img src="https://www.jakian.com.tw/images/JAKIAN_top.gif" alt="JAKIAN LOGO" class="logo-img">
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-item"><span class="lang-zh">首頁</span><span class="lang-en">Home</span></a>
+            <a href="Jakian com.htm" class="nav-item"><span class="lang-zh">公司簡介</span><span class="lang-en">Profile</span></a>
+            <a href="electric paint.htm" class="nav-item"><span class="lang-zh">電動噴槍</span><span class="lang-en">Electric Spray</span></a>
+            <a href="DC-PAINTING ROLLER.htm" class="nav-item"><span class="lang-zh">油漆滾輪</span><span class="lang-en">Paint Roller</span></a>
+            <a href="E-Z HANDY ROLLER.htm" class="nav-item"><span class="lang-zh">手動滾輪</span><span class="lang-en">Handy Roller</span></a>
+            <a href="GLUE GUNS SERIES.htm" class="nav-item"><span class="lang-zh">熱熔膠槍</span><span class="lang-en">Glue Guns</span></a>
+            <a href="E_Z Magicsticks.htm" class="nav-item"><span class="lang-zh">魔術棒</span><span class="lang-en">Magicsticks</span></a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>企業簡介</h1>
+            <p style="color:#888; text-transform:uppercase; letter-spacing:1px; margin-top: 5px;">Corporate Profile</p>
+        </div>
+
+        <div class="profile-container">
+            <div class="corporate-text">
+                <section>
+                    <h2>公司願景 Our Vision</h2>
+                    <div class="lang-block">
+                        <span class="zh">傑肯企業有限公司致力於成為全球五金工具市場的技術領航者。</span>
+                        <span class="en">Jakian Enterprises Co., Ltd. is dedicated to becoming a technological leader in the global hardware and DIY tools market.</span>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>卓越品質 Excellence in Quality</h2>
+                    <div class="lang-block">
+                        <span class="zh">我們專注於研發高效能電動噴槍與專業塗裝工具，結合創新技術與卓越耐用性，滿足工業與專業人士的嚴苛要求。</span>
+                        <span class="en">Focusing on high-performance electric spray guns and professional coating tools, we combine innovation with durability to meet the rigorous demands of industrial professionals worldwide.</span>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>全球佈局 Global Footprint</h2>
+                    <div class="lang-block">
+                        <span class="zh">憑藉數十年的製造經驗與嚴格的品質控管，傑肯的產品已行銷至世界各地，成為國際客戶信賴的供應夥伴。</span>
+                        <span class="en">With decades of manufacturing expertise and stringent quality control, Jakian's products are exported globally, making us a trusted partner for international clients.</span>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="contact-card">
+                <div class="info-row">
+                    <label>Legal Name / 官方名稱</label>
+                    <p><b>傑肯企業有限公司</b><br>JAKIAN ENTERPRISES CO., LTD.</p>
+                </div>
+                <div class="info-row">
+                    <label>Headquarters / 台北總部</label>
+                    <p>108 台北市萬華區康定路 69 號 10 樓<br>
+                    10F, No. 69, Kanting Rd, Taipei 108, Taiwan</p>
+                </div>
+                <div class="info-row">
+                    <label>Core Products / 核心產品</label>
+                    <p>專業電動噴槍、油漆滾輪、高性能熱熔膠槍、E-Z系列工具</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 JAKIAN ENTERPRISES CO., LTD. | All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

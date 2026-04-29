@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>傑肯企業有限公司 JAKIAN ENTERPRISES CO., LTD.</title>
+    <style>
+        :root {
+            --primary-blue: #004494;
+            --nav-bg: #2d2d2d;
+            --content-width: 1200px; /* 統一對齊寬度 */
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* --- 1. 頁首：MARK 與 LOGO 放大並撐滿 1200px --- */
+        header {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .header-banner {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 0; /* 緊密結合 */
+        }
+
+        .mark-img {
+            height: 150px; /* 放大高度，寬度隨比例增加 */
+            width: auto;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .logo-img {
+            height: 150px; /* 與 MARK 等高 */
+            flex-grow: 1;  /* 強制 LOGO 伸展填滿剩餘寬度 */
+            object-fit: fill; /* 確保右側邊界死鎖在 1200px 線上 */
+            display: block;
+        }
+
+        /* --- 2. 導覽列 --- */
+        nav {
+            background: var(--nav-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 0;
+            text-decoration: none;
+            color: white;
+            border-right: 1px solid #444;
+            transition: 0.3s;
+        }
+
+        .nav-item:last-child { border-right: none; }
+        .nav-item:hover { background-color: var(--primary-blue); }
+
+        .lang-zh { font-size: 16px; font-weight: bold; }
+        .lang-en { font-size: 11px; color: #aaa; text-transform: uppercase; margin-top: 2px; }
+
+        /* --- 3. 主力產品圖 (與上方 Header 同寬) --- */
+        .hero-section {
+            width: 100%;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: var(--content-width);
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* --- 4. 產品區塊 (完整 6 個鏈結) --- */
+        .product-section {
+            max-width: var(--content-width);
+            margin: 0 auto 60px;
+            padding: 0 10px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 35px 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-zh { display: block; font-size: 20px; font-weight: bold; color: var(--primary-blue); margin-bottom: 5px; }
+        .card-en { font-size: 12px; color: #888; text-transform: uppercase; }
+
+        /* --- 5. 手機介面優化 --- */
+        @media (max-width: 768px) {
+            header, .hero-image, .nav-container, .product-section {
+                width: 100%;
+            }
+            .header-banner {
+                flex-direction: column; /* 手機版改為上下堆疊，避免變形 */
+            }
+            .mark-img, .logo-img {
+                height: auto;
+                width: 80%; /* 手機版縮小顯示 */
+                object-fit: contain;
+            }
+            .nav-container { flex-wrap: wrap; }
+            .nav-item { width: 50%; flex: none; border-bottom: 1px solid #444; }
+            .product-grid { grid-template-columns: 1fr; padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-banner">
+            <img src="https://www.jakian.com.tw/images/mark_001.jpg" alt="MARK" class="mark-img">
+            <img src="https://www.jakian.com.tw/images/JAKIAN_top.gif" alt="JAKIAN LOGO" class="logo-img">
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-item"><span class="lang-zh">首頁</span><span class="lang-en">Home</span></a>
+            <a href="Jakian com.htm" class="nav-item"><span class="lang-zh">公司簡介</span><span class="lang-en">Profile</span></a>
+            <a href="electric paint.htm" class="nav-item"><span class="lang-zh">電動噴槍</span><span class="lang-en">Electric Spray</span></a>
+            <a href="DC-PAINTING ROLLER.htm" class="nav-item"><span class="lang-zh">油漆滾輪</span><span class="lang-en">Paint Roller</span></a>
+            <a href="E-Z HANDY ROLLER.htm" class="nav-item"><span class="lang-zh">手動滾輪</span><span class="lang-en">Handy Roller</span></a>
+            <a href="GLUE GUNS SERIES.htm" class="nav-item"><span class="lang-zh">熱熔膠槍</span><span class="lang-en">Glue Guns</span></a>
+            <a href="E_Z Magicsticks.htm" class="nav-item"><span class="lang-zh">魔術棒</span><span class="lang-en">Magicsticks</span></a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <img src="https://www.jakian.com.tw/JAKIAN.jpg" alt="JAKIAN" class="hero-image">
+    </section>
+
+    <main class="product-section">
+        <div class="product-grid">
+            <a href="electric paint.htm" class="product-card">
+                <span class="card-zh">電動噴槍系列</span><span class="card-en">Electric Paint Guns</span>
+            </a>
+            <a href="DC-PAINTING ROLLER.htm" class="product-card">
+                <span class="card-zh">油漆滾輪系列</span><span class="card-en">Painting Rollers</span>
+            </a>
+            <a href="E-Z HANDY ROLLER.htm" class="product-card">
+                <span class="card-zh">手動滾輪系列</span><span class="card-en">Handy Rollers</span>
+            </a>
+            <a href="GLUE GUNS SERIES.htm" class="product-card">
+                <span class="card-zh">熱熔膠槍系列</span><span class="card-en">Glue Gun Series</span>
+            </a>
+            <a href="E_Z Magicsticks.htm" class="product-card">
+                <span class="card-zh">魔術棒系列</span><span class="card-en">Magicsticks Series</span>
+            </a>
+            <a href="Jakian com.htm" class="product-card">
+                <span class="card-zh">關於我們</span><span class="card-en">Company Profile</span>
+            </a>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #999; border-top: 1px solid #eee;">
+        &copy; 2026 JAKIAN ENTERPRISES CO., LTD.
+    </footer>
+
+</body>
+</html>

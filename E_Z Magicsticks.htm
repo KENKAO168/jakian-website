@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔術棒系列 E-Z Magicsticks - 傑肯企業有限公司</title>
+    <style>
+        :root {
+            --primary-blue: #004494;
+            --nav-bg: #2d2d2d;
+            --accent-purple: #9966FF;
+            --content-width: 1200px;
+        }
+
+        body {
+            font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* --- 1. 頁首：MARK 與 LOGO 放大撐滿 1200px --- */
+        header {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .header-banner {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 0;
+        }
+
+        .mark-img {
+            height: 150px;
+            width: auto;
+            flex-shrink: 0;
+        }
+
+        .logo-img {
+            height: 150px;
+            flex-grow: 1;
+            object-fit: fill; 
+        }
+
+        /* --- 2. 導覽列 --- */
+        nav {
+            background: var(--nav-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 0;
+            text-decoration: none;
+            color: white;
+            border-right: 1px solid #444;
+            transition: 0.3s;
+        }
+
+        .nav-item:last-child { border-right: none; }
+        .nav-item:hover { background-color: var(--primary-blue); }
+
+        .lang-zh { font-size: 16px; font-weight: bold; }
+        .lang-en { font-size: 11px; color: #aaa; text-transform: uppercase; margin-top: 2px; }
+
+        /* --- 3. 產品內容區 --- */
+        .main-content {
+            max-width: var(--content-width);
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .product-header { text-align: center; margin-bottom: 30px; }
+        .product-header h1 { color: var(--primary-blue); font-size: 32px; margin-bottom: 5px; }
+        .patent-tag { color: #d32f2f; font-weight: bold; font-size: 18px; display: block; }
+
+        /* 標題下方藍線比照其他網頁拉長 (全寬) */
+        .product-header h1 {
+            color: var(--primary-blue);
+            font-size: 32px;
+            border-bottom: 3px solid var(--primary-blue);
+            display: block; /* 改為 block 以延伸寬度 */
+            padding-bottom: 10px;
+            margin: 0;
+        }
+
+        .product-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .product-image-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .product-image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-details h2 {
+            color: var(--primary-blue);
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .feature-item {
+            margin-bottom: 25px;
+        }
+
+        .zh-desc {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .en-desc {
+            display: block;
+            font-size: 15px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* --- 4. 手機介面優化 --- */
+        @media (max-width: 768px) {
+            header, .nav-container, .main-content { width: 100%; }
+            .header-banner { flex-direction: column; }
+            .mark-img, .logo-img { height: auto; width: 90%; }
+            .nav-container { flex-wrap: wrap; }
+            .nav-item { width: 50%; flex: none; border-bottom: 1px solid #444; }
+            
+            .product-flex {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #888;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-banner">
+            <img src="https://www.jakian.com.tw/images/mark_001.jpg" alt="MARK" class="mark-img">
+            <img src="https://www.jakian.com.tw/images/JAKIAN_top.gif" alt="JAKIAN LOGO" class="logo-img">
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-item"><span class="lang-zh">首頁</span><span class="lang-en">Home</span></a>
+            <a href="Jakian com.htm" class="nav-item"><span class="lang-zh">公司簡介</span><span class="lang-en">Profile</span></a>
+            <a href="electric paint.htm" class="nav-item"><span class="lang-zh">電動噴槍</span><span class="lang-en">Electric Spray</span></a>
+            <a href="DC-PAINTING ROLLER.htm" class="nav-item"><span class="lang-zh">油漆滾輪</span><span class="lang-en">Paint Roller</span></a>
+            <a href="E-Z HANDY ROLLER.htm" class="nav-item"><span class="lang-zh">手動滾輪</span><span class="lang-en">Handy Roller</span></a>
+            <a href="GLUE GUNS SERIES.htm" class="nav-item"><span class="lang-zh">熱熔膠槍</span><span class="lang-en">Glue Guns</span></a>
+            <a href="E_Z Magicsticks.htm" class="nav-item"><span class="lang-zh">魔術棒</span><span class="lang-en">Magicsticks</span></a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="product-container">
+            <div class="product-header">
+                <h1>PT-903 / E-Z Magicsticks <BR>魔術棒系列</h1>
+            </div>
+
+            <div class="product-flex">
+                <div class="product-image-box">
+                    <img src="images/PT-903.jpg" alt="PT-903 E-Z Magicsticks">
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--accent-purple);">Professional DIY Series</p>
+                </div>
+
+                <div class="product-details">
+                    <h2>產品優勢 Advantages</h2>
+                    <div class="feature-item">
+                        <span class="zh-desc">人性化設計與輕量化結構</span>
+                        <span class="en-desc">Ergonomic design with lightweight structure for long-term use without fatigue.</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="zh-desc">適用於多種居家修繕場景</span>
+                        <span class="en-desc">Ideal for various home improvement and DIY projects, providing professional results.</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="zh-desc">耐用度高且易於維護</span>
+                        <span class="en-desc">High durability with easy maintenance, ensuring a long product life cycle.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>JAKIAN ENTERPRISES CO., LTD. &copy; 2026. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
